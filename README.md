@@ -1,8 +1,3 @@
-How to use
-1. pip install -r requirements.txt
-2. run Phq9Model.py and sentimentModel.py
-3. run server.py
-
 **Homepage**
 ![image](https://github.com/hyewav/Mind-Guard-FYP/assets/86526994/74029ca9-522a-4a18-a16c-bba0e378d92c)
 
