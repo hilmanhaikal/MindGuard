@@ -212,16 +212,6 @@ a {
     .image {
         width: 70px;
     }
-
-    .parallax {
-        height: 70vh;
-        background-attachment: scroll; /* Disable parallax on mobile if necessary */
-    }
-
-    .parallax img {
-        width: 100%;
-        height: auto;
-    }
 }
 
 /* Existing styles... */
@@ -289,6 +279,16 @@ a {
 
     #text {
         font-size: 1.5em;
-        text-align: center;
+        padding: 0 20px;
+    }
+
+    .parallax {
+        height: 70vh;
+        background-attachment: scroll; /* Disable parallax on mobile if necessary */
+    }
+
+    .parallax img {
+        width: 100%;
+        height: auto;
     }
 }
