@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -103,16 +103,16 @@ h4 {
     margin-bottom: 10px;
 }
 
-.service-info{
-	margin-bottom: 20px;
+.service-info {
+    margin-bottom: 20px;
 }
 
 .container {
     display: flex;
-  }
+}
 
 .left-side, .right-side {
-width: 50%;
+    width: 50%;
 }
 
 li {
@@ -120,14 +120,14 @@ li {
     margin-bottom: 10px;
 }
 
-.btn-appoint, .btn-appoint:hover, .btn-appoint:focus{
-	margin-top: 30px;
-    margin-bottom: 50px; /*yahanpe*/
-	padding: 10px 20px;
-	font-size: 12px;
-	background-color: rgba(12, 184, 182, 0.91);
-	border-radius: 3px;
-	color: #fff;
+.btn-appoint, .btn-appoint:hover, .btn-appoint:focus {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: rgba(12, 184, 182, 0.91);
+    border-radius: 3px;
+    color: #fff;
 }
 
 .btn-primary {
@@ -145,11 +145,11 @@ li {
     background-color: #45a049;
 }
 
-.image{
+.image {
     width: 100px;
 }
 
-.form-control{
+.form-control {
     width: 50%;
     height: 100px;
     padding: 10px;
@@ -159,6 +159,53 @@ li {
     background: #f1f1f1;
 }
 
-a{
+a {
     color: rgb(33, 235, 33);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+        margin-right: 100px;
+    }
+
+    .navigation a {
+        padding: 5px 10px;
+        margin: 0 5px;
+        font-size: 0.9em;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+    }
+
+    .form-control, .btn-primary {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .btn-primary {
+        padding: 12px;
+    }
+
+    #text {
+        font-size: 1.5em;
+    }
+
+    .sec h2 {
+        font-size: 2em;
+    }
+
+    .image {
+        width: 70px;
+    }
 }
