@@ -63,15 +63,39 @@ header {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
-.parallax img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    pointer-events: none;
+#hill1 {
+    background-image: url('static/img/hill1.png');
+}
+
+#hill2 {
+    background-image: url('static/img/hill2.png');
+}
+
+#hill3 {
+    background-image: url('static/img/hill3.png');
+}
+
+#hill4 {
+    background-image: url('static/img/hill4.png');
+}
+
+#hill5 {
+    background-image: url('static/img/hill5.png');
+}
+
+#tree {
+    background-image: url('static/img/tree.png');
+}
+
+#leaf {
+    background-image: url('static/img/leaf.png');
+}
+
+#plant {
+    background-image: url('static/img/plant.png');
 }
 
 #text {
@@ -206,8 +230,14 @@ a {
     }
 
     .parallax {
-        height: 70vh;
-        background-attachment: scroll; /* Disable parallax on mobile if necessary */
+        height: 70vh; /* Adjust height for smaller screens */
+        background-attachment: scroll; /* Disable parallax effect on mobile */
+    }
+
+    #hill1, #hill2, #hill3, #hill4, #hill5, #tree, #leaf, #plant {
+        background-size: contain; /* Ensure the image fits within the container */
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     #text {
