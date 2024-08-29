@@ -63,39 +63,15 @@ header {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
-#hill1 {
-    background-image: url('static/img/hill1.png');
-}
-
-#hill2 {
-    background-image: url('static/img/hill2.png');
-}
-
-#hill3 {
-    background-image: url('static/img/hill3.png');
-}
-
-#hill4 {
-    background-image: url('static/img/hill4.png');
-}
-
-#hill5 {
-    background-image: url('static/img/hill5.png');
-}
-
-#tree {
-    background-image: url('static/img/tree.png');
-}
-
-#leaf {
-    background-image: url('static/img/leaf.png');
-}
-
-#plant {
-    background-image: url('static/img/plant.png');
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
 }
 
 #text {
@@ -229,21 +205,23 @@ a {
         text-align: center;
     }
 
-    .parallax {
-        height: 70vh; /* Adjust height for smaller screens */
-        background-attachment: scroll; /* Disable parallax effect on mobile */
-    }
-
-    #hill1, #hill2, #hill3, #hill4, #hill5, #tree, #leaf, #plant {
-        background-size: contain; /* Ensure the image fits within the container */
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    #text {
-        font-size: 1.5em;
-        padding: 0 20px;
-    }
+    @media (max-width: 768px) {
+        .parallax {
+            background: #003329; /* Replace this with the desired solid color */
+            height: auto; /* Adjust height if needed */
+            display: block; /* Remove flexbox to avoid centering issues */
+        }
+    
+        .parallax img {
+            display: none; /* Hide the parallax image */
+        }
+    
+        #text {
+            position: relative; /* Adjust text position to be within the normal flow */
+            font-size: 1.5em; /* Adjust text size if necessary */
+            color: #fff; /* Ensure text is visible on the new background */
+        }
+    }    
 
     .container {
         flex-direction: column;
