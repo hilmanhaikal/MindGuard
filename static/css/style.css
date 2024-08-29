@@ -284,7 +284,7 @@ a {
 
     .parallax {
         height: 70vh;
-        background-attachment: scroll; /* Disable parallax on mobile if necessary */
+        /* background-attachment: scroll; Disable parallax on mobile if necessary */
     }
 
     .parallax img {
