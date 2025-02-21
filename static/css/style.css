@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-html {
+html{
     scroll-behavior: smooth;
 }
 
@@ -15,22 +15,42 @@ html {
     background: rgba(0, 0, 0, .2);
 }
 
+/* General styles */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background: #f9f9f9;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     z-index: 100;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+header .navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header .navigation a.active {
+    border-bottom: 2px solid #fff;
 }
 
 .logo {
@@ -57,21 +77,12 @@ header {
 
 .parallax {
     position: relative;
+    text-align: center;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.parallax img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    pointer-events: none;
 }
 
 #text {
@@ -79,8 +90,15 @@ header {
     font-size: 2em;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-    text-align: center;
-    padding: 0 20px;
+}
+
+.parallax img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 
 .sec {
@@ -93,14 +111,13 @@ header {
     font-size: 3em;
     color: #fff;
     margin-top: 10px;
-    text-shadow: 2px 2px #4CAF50;
+    text-shadow: 2px 2px#4CAF50;
 }
 
 .sec p {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
-    text-align: justify;
 }
 
 h4 {
@@ -109,8 +126,8 @@ h4 {
     margin-bottom: 10px;
 }
 
-.service-info {
-    margin-bottom: 20px;
+.service-info{
+	margin-bottom: 20px;
 }
 
 .container {
@@ -120,12 +137,9 @@ h4 {
 }
 
 .left-side, .right-side {
-    width: 48%;
-}
-
-ul.list-group {
-    padding-left: 0;
-    margin-left: 0;
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
 }
 
 li {
@@ -133,14 +147,14 @@ li {
     margin-bottom: 10px;
 }
 
-.btn-appoint, .btn-appoint:hover, .btn-appoint:focus {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    padding: 10px 20px;
-    font-size: 12px;
-    background-color: rgba(12, 184, 182, 0.91);
-    border-radius: 3px;
-    color: #fff;
+.btn-appoint, .btn-appoint:hover, .btn-appoint:focus{
+	margin-top: 30px;
+    margin-bottom: 50px; /*yahanpe*/
+	padding: 10px 20px;
+	font-size: 12px;
+	background-color: rgba(12, 184, 182, 0.91);
+	border-radius: 3px;
+	color: #fff;
 }
 
 .btn-primary {
@@ -158,11 +172,11 @@ li {
     background-color: #45a049;
 }
 
-.image {
+.image{
     width: 100px;
 }
 
-.form-control {
+.form-control{
     width: 50%;
     height: 100px;
     padding: 10px;
@@ -172,87 +186,41 @@ li {
     background: #f1f1f1;
 }
 
-a {
+a{
     color: rgb(33, 235, 33);
 }
 
-/* Responsive Design */
+/* Responsive styles */
 @media (max-width: 768px) {
     header {
-        padding: 10px 20px;
+        flex-direction: column;
+    }
+
+    header .navigation {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .logo {
-        font-size: 1.5em;
-        margin-right: 0;
-    }
-
-    .navigation {
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navigation a {
-        padding: 10px 15px;
+    header .navigation a {
         margin: 5px 0;
-        font-size: 1em;
-        width: 100%;
-        text-align: center;
     }
-
-    @media (max-width: 768px) {
-        .parallax {
-            background: #003329; /* Replace this with the desired solid color */
-            height: auto; /* Adjust height if needed */
-            display: block; /* Remove flexbox to avoid centering issues */
-        }
-    
-        .parallax img {
-            display: none; /* Hide the parallax image */
-        }
-    
-        #text {
-            position: relative; /* Adjust text position to be within the normal flow */
-            font-size: 1.5em; /* Adjust text size if necessary */
-            color: #fff; /* Ensure text is visible on the new background */
-        }
-    }    
 
     .container {
         flex-direction: column;
-        padding: 0 20px;
     }
 
     .left-side, .right-side {
-        width: 100%;
-        margin-bottom: 20px;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 20px;
     }
 
-    .form-control, .btn-primary {
-        width: 100%;
-        font-size: 1em;
-    }
-
-    .btn-primary {
-        padding: 12px;
-    }
-
-    .image {
-        width: 80px;
-    }
-
-    h2 {
-        font-size: 2em;
-        text-align: center;
-    }
-
-    p {
-        font-size: 1em;
-        text-align: justify;
+    .parallax h2 {
+        font-size: 18px;
     }
 }
